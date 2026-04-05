@@ -1,3 +1,5 @@
+const db = require('../models/db');
+
 const generateFriendlyId = () => {
     return 'REC-' + Math.random().toString(36).substr(2, 7).toUpperCase();
 };

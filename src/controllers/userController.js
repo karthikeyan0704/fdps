@@ -1,3 +1,5 @@
+const db = require('../models/db');
+
 const generateSafeUserId = (name) => {
     return `${name.toLowerCase()}-${Math.floor(Math.random() * 899 + 100)}`;
 };

@@ -1,3 +1,5 @@
+const db = require('../models/db');
+
 const dashboardSummaryService = {
     calculateFinancialOverview: () => {
         const allTransactions = db.getRecords();
