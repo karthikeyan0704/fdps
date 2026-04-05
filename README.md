@@ -1,32 +1,32 @@
-# 📈 Finance Data Management & Access Control API
+# Finance Data Management and Access Control API
 
-## 🎯 Project Overview
-This project is a high-performance, lightweight backend designed to handle financial transaction processing with strict **Role-Based Access Control (RBAC)**. Built using **Node.js and Express**, it demonstrates a clean, modular architecture suitable for modern financial dashboards.
+## Project Overview
+This project is a lightweight, high-performance backend designed to handle financial transaction processing with strict Role-Based Access Control (RBAC). Built using Node.js and Express, it demonstrates a clean, modular architecture suitable for professional financial dashboards.
 
 ---
 
-## 🚀 Key Architectural Pillars
+## Key Architectural Pillars
 
-### 1. 🛡️ Role-Based Security (RBAC)
+### 1. Role-Based Security (RBAC)
 The system enforces three distinct access tiers to ensure data integrity:
-- **Admin**: Full administrative control (CRUD Records + User Management).
-- **Analyst**: Data insights & summary access (View Records + View Dashboard).
-- **Viewer**: Read-only access (View Records).
+- **Admin**: Full administrative control including record management and user onboarding.
+- **Analyst**: Access to lists and advanced dashboard summaries.
+- **Viewer**: Read-only access to transaction history.
 
-### 2. ⚡ Lite & Independent
-- **Zero Heavy Dependencies**: Built with only `express` and standard Node.js modules.
-- **Smart Persistence**: Implemented a custom JSON-based database layer in `src/models/db.js` for instant setup without needing an external SQL/NoSQL installation.
+### 2. Lightweight and Independent
+- **Zero Heavy Dependencies**: Built with only Express and standard Node.js modules to ensure fast deployment.
+- **Smart Persistence**: Implemented a custom JSON-based database layer for instant setup without requiring an external database installation.
 
-### 3. 🏗️ Clean Modular Structure
-The codebase follows the principle of **Separation of Concerns**:
+### 3. Clean Modular Structure
+The codebase follows the principle of Separation of Concerns:
 - **Routes**: Clean API entry points.
 - **Controllers**: Managing the request-response lifecycle.
-- **Services**: Complex financial aggregation and logic (e.g., summary calculations).
-- **Middlewares**: Centralized Auth and RBAC enforcement.
+- **Services**: Complex financial aggregation and analytical logic.
+- **Middlewares**: Centralized authorization and RBAC enforcement.
 
 ---
 
-## 🛠️ Setup & Running
+## Setup and Running
 
 ### 1. Install Dependencies
 ```bash
@@ -37,60 +37,60 @@ npm install
 ```bash
 npm start
 ```
-*The server will be available at `http://localhost:3000`.*
+*The server will be available at http://localhost:3000.*
 
 ### 3. Verification (Automated Test)
-I have included a functional test script to demonstrate the system's logic instantly:
+I have included a functional test script to demonstrate the system logic immediately:
 ```bash
 node tests/test_api.js
 ```
 
 ---
 
-## 🔑 Authentication Guide (Mock System)
-To simulate a "Token" or Session, include the `x-user-id` header in your Postman requests:
+## Authentication Guide (Mock System)
+To simulate a session, include the `x-user-id` header in your API requests:
 
 | User ID | Role | Description |
 | :--- | :--- | :--- |
-| `admin-01` | **Admin** | Full system control |
-| `analyst-01` | **Analyst** | View insights and transaction lists |
-| `viewer-01` | **Viewer** | View lists only |
+| `admin-01` | Admin | Full system control |
+| `analyst-01` | Analyst | View insights and transaction lists |
+| `viewer-01` | Viewer | View lists only |
 
 ---
 
-## 📊 Permission Matrix
+## Permission Matrix
 | Feature | Admin | Analyst | Viewer |
 | :--- | :---: | :---: | :---: |
-| View Financial Records | ✅ | ✅ | ✅ |
-| View Dashboard Summary | ✅ | ✅ | ✅ |
-| Create/Edit Records | ✅ | ❌ | ❌ |
-| Delete Records | ✅ | ❌ | ❌ |
-| Manage User Accounts | ✅ | ❌ | ❌ |
+| View Financial Records | Yes | Yes | Yes |
+| View Dashboard Summary | Yes | Yes | Yes |
+| Create/Edit Records | Yes | No | No |
+| Delete Records | Yes | No | No |
+| Manage User Accounts | Yes | No | No |
 
 ---
 
-## 🧠 Design Decisions & Trade-offs
-- **Custom Header Auth**: Chosen over JWT to prioritize **Lite-weight performance** for this assignment while still enforcing 100% security logic in the middleware.
-- **Service Layer Pattern**: Analytics logic (Net Balance, Category Totals) was moved to a separate service tier (`summaryService`) to keep controllers lean and testable.
-- **Humanized Error Handling**: Error messages are designed to be helpful and conversational (e.g., providing tips on missing headers) to improve front-end integration.
+## Design Decisions and Trade-offs
+- **Custom Header Auth**: Chosen over JWT to prioritize lightweight performance for this assessment while still enforcing full security logic in the middleware.
+- **Service Layer Pattern**: Analytics logic was moved to a separate service tier to keep controllers lean and maintainable.
+- **Humanized Error Handling**: Error messages are designed to be conversational and descriptive to improve the front-end developer's experience.
 
 ---
 
-## 🛣️ API Endpoints Roadmap
+## API Endpoints Roadmap
 
-### Records (`/api/records`)
-- `GET /api/records` (Filter by `?type=income`, `?category=Salary`)
+### Records (/api/records)
+- `GET /api/records` (Supports filtering by type or category)
 - `POST /api/records` (Admin Only)
 - `PUT /api/records/:id` (Admin Only)
 
-### Insights (`/api/summary`)
-- `GET /api/summary` (Aggregated totals for Net Balance and Trends)
+### Insights (/api/summary)
+- `GET /api/summary` (Aggregated totals for Net Balance and Activity)
 
-### Users (`/api/users`)
+### Users (/api/users)
 - `GET /api/users` (Admin Only: System-wide user list)
-- `POST /api/users` (Admin Only: Onboarding)
+- `POST /api/users` (Admin Only: New User Creation)
 
 ---
 
-### 📬 Submission Note
-*This assignment focuses on backend structural integrity, role enforcement, and reliable data flow. It is designed to be easily integrated with a React/Vue frontend.*
+### Submission Note
+*This assignment focuses on backend structural integrity, role enforcement, and reliable data flow. It is designed to be easily integrated with any modern front-end framework.*
