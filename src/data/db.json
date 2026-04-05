@@ -1,0 +1,107 @@
+{
+  "users": [
+    {
+      "id": "admin-01",
+      "username": "admin",
+      "password": "password",
+      "role": "admin",
+      "status": "active"
+    },
+    {
+      "id": "analyst-01",
+      "username": "analyst",
+      "password": "password",
+      "role": "analyst",
+      "status": "active"
+    },
+    {
+      "id": "viewer-01",
+      "username": "viewer",
+      "password": "password",
+      "role": "viewer",
+      "status": "active"
+    }
+  ],
+  "records": [
+    {
+      "id": "mnm0f7ugcis06mvj5qc",
+      "amount": 5000,
+      "type": "income",
+      "category": "Project Pay",
+      "date": "2026-04-05",
+      "notes": "Consulting fee",
+      "createdBy": "admin-01",
+      "createdAt": "2026-04-05T17:02:49.720Z"
+    },
+    {
+      "id": "mnm0f7uyfw1fbo3k3yv",
+      "amount": 200,
+      "type": "expense",
+      "category": "Coffee",
+      "date": "2026-04-05",
+      "notes": "Monthly bulk bean purchase",
+      "createdBy": "admin-01",
+      "createdAt": "2026-04-05T17:02:49.738Z"
+    },
+    {
+      "id": "mnm0fgi191o1x5hkzgj",
+      "amount": 5000,
+      "type": "income",
+      "category": "Project Pay",
+      "date": "2026-04-05",
+      "notes": "Consulting fee",
+      "createdBy": "admin-01",
+      "createdAt": "2026-04-05T17:03:00.937Z"
+    },
+    {
+      "id": "mnm0fgib7pd8fvp1ti8",
+      "amount": 200,
+      "type": "expense",
+      "category": "Coffee",
+      "date": "2026-04-05",
+      "notes": "Monthly bulk bean purchase",
+      "createdBy": "admin-01",
+      "createdAt": "2026-04-05T17:03:00.947Z"
+    },
+    {
+      "id": "mnm0v1dtrur2frijyr",
+      "amount": 5000,
+      "type": "income",
+      "category": "Salary",
+      "date": "2026-04-05",
+      "notes": "Full month salary",
+      "createdBy": "admin-01",
+      "createdAt": "2026-04-05T17:15:07.841Z"
+    },
+    {
+      "id": "mnm0wn3tmnbl4jrvyy",
+      "amount": 1200,
+      "type": "expense",
+      "category": "Rent",
+      "date": "2026-04-05",
+      "notes": "Monthly rent",
+      "createdBy": "admin-01",
+      "createdAt": "2026-04-05T17:16:22.649Z"
+    },
+    {
+      "id": "mnm1a0bl9gbsallxyoq",
+      "amount": 5000,
+      "type": "income",
+      "category": "Project Pay",
+      "date": "2026-04-05",
+      "notes": "Consulting fee",
+      "createdBy": "admin-01",
+      "createdAt": "2026-04-05T17:26:46.305Z"
+    },
+    {
+      "id": "mnm1a0bty9qr7lp6rz",
+      "amount": 200,
+      "type": "expense",
+      "category": "Coffee",
+      "date": "2026-04-05",
+      "notes": "Monthly bulk bean purchase",
+      "createdBy": "admin-01",
+      "createdAt": "2026-04-05T17:26:46.313Z"
+    }
+  ]
+}
